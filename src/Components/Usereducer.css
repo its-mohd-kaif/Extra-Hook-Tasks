@@ -1,0 +1,37 @@
+.rowContainer1 {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+}
+.column1 {
+  width: 40%;
+  margin-left: 3%;
+}
+.column2 {
+  width: 40%;
+  margin-right: 3%;
+}
+.inputDiv {
+  padding: 3%;
+  background-color: white;
+  margin-top: 2%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.inputField {
+  width: 80%;
+  padding: 1%;
+  font-size: large;
+}
+.submitBtn {
+  padding: 10px 20px;
+  background-color: aqua;
+  color: black;
+  border: none;
+  font-size: large;
+  font-weight: bolder;
+  border-radius: 12px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  cursor: pointer;
+}

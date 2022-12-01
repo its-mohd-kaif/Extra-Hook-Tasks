@@ -1,0 +1,14 @@
+.inputBox{
+    width: 40%;
+    padding: 0.5%;
+    font-size: large;
+    margin: 1%;
+}
+.white{
+    background-color: white;
+    color: black;
+}
+.black{
+    background-color: black;
+    color: white;
+}
