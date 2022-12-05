@@ -5,6 +5,7 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import "./Model.css";
 
 const style = {
   position: "absolute",
@@ -19,17 +20,9 @@ const style = {
 };
 
 export default function TransitionsModal({ data }) {
-  console.log("Model", data);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const [barcode, setBarcode] = React.useState("");
-
-  // if (data.barcode === false) {
-  //   setBarcode("Unselect");
-  // } else {
-  //   setBarcode("Select");
-  // }
 
   return (
     <div>
@@ -58,34 +51,35 @@ export default function TransitionsModal({ data }) {
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
               <div>
-                {/* <center> */}
-                <table>
-                  <tr>
-                    <th>Title</th>
-                    <td>{data.title}</td>
-                  </tr>
-                  <tr>
-                    <th>Description</th>
-                    <td>{data.description}</td>
-                  </tr>
-                  <tr>
-                    <th>Handling Time</th>
-                    <td>{data.handling_time}</td>
-                  </tr>
-                  <tr>
-                    <th>Barcode/GTIN Exemption</th>
-                    <td>{data.barcode}</td>
-                  </tr>
-                  <tr>
-                    <th>Add Amazon Category</th>
-                    <td>{data.category}</td>
-                  </tr>
-                  <tr>
-                    <th>Image Selection</th>
-                    <td>{data.image_select}</td>
-                  </tr>
-                </table>
-                {/* </center> */}
+                <center>
+                  {/* Display Data Into Table */}
+                  <table>
+                    <tr>
+                      <th>Title</th>
+                      <td>{data.title}</td>
+                    </tr>
+                    <tr>
+                      <th>Description</th>
+                      <td>{data.description}</td>
+                    </tr>
+                    <tr>
+                      <th>Handling Time</th>
+                      <td>{data.handling_time}</td>
+                    </tr>
+                    <tr>
+                      <th>Barcode/GTIN Exemption</th>
+                      <td>{data.barcode}</td>
+                    </tr>
+                    <tr>
+                      <th>Add Amazon Category</th>
+                      <td>{data.category}</td>
+                    </tr>
+                    <tr>
+                      <th>Image Selection</th>
+                      <td>{data.image_select}</td>
+                    </tr>
+                  </table>
+                </center>
               </div>
             </Typography>
           </Box>

@@ -15,22 +15,23 @@ function Usememo() {
 
     let res = num1 * num2;
     console.log("Expensive Function");
-
     return res;
   }
+  // UseMemo Used Stop Unwanted Extra Rendring
   const memofun = useMemo(() => expensive(), []);
+  // First Number Input Handler
   const num1Handler = (e) => {
     setNum1(e.target.value);
   };
-
+  // Second Number Input Handler
   const num2Handler = (e) => {
     setNum2(e.target.value);
   };
-
+  // Add Both Numbers
   const addHandler = () => {
     setSum(Number(num1) + Number(num2));
   };
-
+  // Theme Change Function
   const colorHandler = () => {
     if (color === "white") {
       setColor("black");

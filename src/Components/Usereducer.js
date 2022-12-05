@@ -6,18 +6,21 @@ import { initialState } from "../reducers/formReducer";
 
 function Usereducer() {
   const [state, dispatch] = useReducer(formReducer, initialState);
-  if (state.barcode === false) {
-    state.barcode = "";
-  } else if (state.barcode === true) {
-    state.barcode = "Select";
-  }
+
   const handleTextChange = (e) => {
+    // Call Dispatch
     dispatch({
       type: "HANDLE_INPUT_TEXT",
       field: e.target.name,
       payload: e.target.value,
     });
   };
+
+  if (state.barcode === false) {
+    state.barcode = "";
+  } else if (state.barcode === true) {
+    state.barcode = "Select";
+  }
 
   return (
     <div>
@@ -26,6 +29,7 @@ function Usereducer() {
           <h1>UseReducer</h1>
         </center>
       </div>
+      {/* Form Display */}
       <section>
         <div className="rowContainer1">
           <div className="column1">
@@ -195,6 +199,7 @@ function Usereducer() {
         <hr></hr>
         <div>
           <center>
+            {/* Pass state value using props */}
             <TransitionsModal data={state} />
           </center>
         </div>
