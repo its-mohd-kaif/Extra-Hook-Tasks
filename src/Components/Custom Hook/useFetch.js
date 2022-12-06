@@ -1,14 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 // Make a Custom Hook
-const useFetch = (url, payload, method) => {
+const useFetch = () => {
   const [data, setData] = useState(null);
-  useEffect(() => {
+  function extractDataFromApi(url, payload, method) {
     fetch(url)
       .then((respone) => respone.json())
       .then((val) => setData(val));
-  }, [url]);
-
-  return [data];
+  }
+  return { data, extractDataFromApi };
 };
 
 export default useFetch;

@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useFetch from "./useFetch";
 // Custom Hook Function
 function Customhook() {
-  const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
+  // UseCustom Hook
+  const { data, extractDataFromApi } = useFetch();
   const [display, setDisplay] = useState([]);
 
+  useEffect(() => {
+    // Call Mehod and pass url link as a parameter
+    extractDataFromApi("https://jsonplaceholder.typicode.com/todos");
+  }, []);
+
   const fetchDataHandler = () => {
+    // Set Value Of Data Into Display State
     setDisplay(data.splice(0, 5));
   };
   return (
